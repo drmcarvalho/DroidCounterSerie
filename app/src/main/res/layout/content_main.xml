@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchDarkMode"
+            android:layout_width="134dp"
+            android:textSize="16sp"
+            android:layout_height="80dp"
+            android:text="@string/night_mode_switch" />
+
+        <TextView
+            android:id="@+id/textViewSerieLabel"
+            android:layout_width="81dp"
+            android:layout_height="51dp"
+            android:text="@string/serie_text_view"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <TextView
+            android:id="@+id/textViewCounter"
+            android:layout_width="81dp"
+            android:layout_height="51dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <Button
+            android:id="@+id/buttonContar"
+            android:layout_width="134dp"
+            android:layout_height="80dp"
+            android:text="+"
+            android:textSize="45sp"
+            android:textAlignment="center"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="364dp" />
+
+        <Button
+            android:id="@+id/buttonZerarSerie"
+            android:layout_width="134dp"
+            android:layout_height="74dp"
+            android:text="@string/zerar_serie_button"
+            android:textSize="17sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="484dp" />
+
+        <TextView
+            android:id="@+id/textTimer"
+            android:layout_width="81dp"
+            android:layout_height="51dp"
+            android:text="45"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="241dp" />
+        <Button
+            android:id="@+id/buttonDescansar"
+            android:layout_width="134dp"
+            android:layout_height="74dp"
+            android:text="@string/descansar"
+            android:textSize="17sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="484dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
