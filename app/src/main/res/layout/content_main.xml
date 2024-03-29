@@ -12,12 +12,7 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/switchDarkMode"
-            android:layout_width="134dp"
-            android:textSize="16sp"
-            android:layout_height="80dp"
-            android:text="@string/night_mode_switch" />
+
 
         <TextView
             android:id="@+id/textViewSerieLabel"
@@ -81,5 +76,12 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="138dp"
             tools:layout_editor_absoluteY="484dp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchDarkMode"
+            android:layout_width="134dp"
+            android:textSize="16sp"
+            android:layout_height="80dp"
+            android:text="@string/night_mode_switch" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
