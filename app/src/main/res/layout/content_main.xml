@@ -23,7 +23,7 @@
             android:id="@+id/textViewSerieLabel"
             android:layout_width="81dp"
             android:layout_height="51dp"
-            android:text="@string/serie_text_view"
+            android:text="@string/serie"
             android:textAlignment="center"
             android:textSize="30sp"
             tools:ignore="MissingConstraints"

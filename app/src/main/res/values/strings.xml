@@ -10,7 +10,7 @@
     <string name="parar_timer">Parar timer</string>
     <string name="mensagem_limite_series">Limite de séries alcançado!</string>
     <string name="zerar_serie_button">Zerar série</string>
-    <string name="serie_text_view">Série</string>
+    <string name="serie">Série</string>
     <string name="night_mode_switch">Night mode</string>
 
     <string name="lorem_ipsum">

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DroidCounterSerie</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="descansar">Rest</string>
+    <string name="parar_timer">Stop time</string>
+    <string name="mensagem_limite_series">Sets limit reached!</string>
+    <string name="zerar_serie_button">Reset set</string>
+    <string name="night_mode_switch">Night mode</string>
+    <string name="lorem_ipsum">na</string>
+    <string name="serie">Set</string>
+</resources>
