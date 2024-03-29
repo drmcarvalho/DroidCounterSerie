@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 buttonTimer.setText(getString(R.string.descansar));
             }
             else {
-                buttonTimer.setText(getText(R.string.parar_timer));
+                buttonTimer.setText(getString(R.string.parar_timer));
                 txtTimer.setText("");
                 contador.start();
             }
