@@ -27,12 +27,8 @@ public class MainActivity extends AppCompatActivity {
     private void init() {
         SwitchCompat switchCompatNightMode = findViewById(R.id.switchDarkMode);
         switchCompatNightMode.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (isChecked) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            }
-            else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            }
+            int nightMode = isChecked ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO;
+            AppCompatDelegate.setDefaultNightMode(nightMode);
         });
         Button buttonCounter = findViewById(R.id.buttonContar);
         buttonCounter.setOnClickListener(v -> {
