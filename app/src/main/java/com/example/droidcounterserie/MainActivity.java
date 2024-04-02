@@ -23,13 +23,17 @@ public class MainActivity extends AppCompatActivity {
         init();
     }
 
-    @SuppressLint("SetTextI18n")
-    private void init() {
+    private void nightModeSwitch() {
         SwitchCompat switchCompatNightMode = findViewById(R.id.switchDarkMode);
         switchCompatNightMode.setOnCheckedChangeListener((buttonView, isChecked) -> {
             int nightMode = isChecked ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO;
             AppCompatDelegate.setDefaultNightMode(nightMode);
         });
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void init() {
+        nightModeSwitch();
 
         Button buttonCounter = findViewById(R.id.buttonContar);
         buttonCounter.setOnClickListener(v -> {
