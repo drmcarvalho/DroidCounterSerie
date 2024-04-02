@@ -42,33 +42,33 @@ public class MainActivity extends AppCompatActivity {
             counter += 1;
             textViewCounter.setText(String.format(Integer.toString(counter)));
         });
-        Button buttonZerar = findViewById(R.id.buttonZerarSerie);
-        buttonZerar.setOnClickListener(v -> {
+        Button buttonResetCounter = findViewById(R.id.buttonZerarSerie);
+        buttonResetCounter.setOnClickListener(v -> {
             TextView textViewCounter = findViewById(R.id.textViewCounter);
             textViewCounter.setText("0");
         });
-        Button buttonTimer = findViewById(R.id.buttonDescansar);
+        Button buttonTimerAndRest = findViewById(R.id.buttonDescansar);
         TextView txtTimer = findViewById(R.id.textTimer);
-        CountDownTimer contador = new CountDownTimer(45000,1000) {
+        CountDownTimer countDown = new CountDownTimer(45000,1000) {
             public void onTick(long millisUntilFinished) {
                 txtTimer.setText(String.format(Integer.toString(Math.round((float) (millisUntilFinished / 1000)))));
             }
 
             public void onFinish() {
                 txtTimer.setText("45");
-                buttonTimer.setText(getString(R.string.descansar));
+                buttonTimerAndRest.setText(getString(R.string.descansar));
             }
         };
-        buttonTimer.setOnClickListener(v -> {
-            if (buttonTimer.getText().equals(getString(R.string.parar_timer))) {
-                contador.cancel();
+        buttonTimerAndRest.setOnClickListener(v -> {
+            if (buttonTimerAndRest.getText().equals(getString(R.string.parar_timer))) {
+                countDown.cancel();
                 txtTimer.setText("45");
-                buttonTimer.setText(getString(R.string.descansar));
+                buttonTimerAndRest.setText(getString(R.string.descansar));
             }
             else {
-                buttonTimer.setText(getString(R.string.parar_timer));
+                buttonTimerAndRest.setText(getString(R.string.parar_timer));
                 txtTimer.setText("");
-                contador.start();
+                countDown.start();
             }
         });
     }
