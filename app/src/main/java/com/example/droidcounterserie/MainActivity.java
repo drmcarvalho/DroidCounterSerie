@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
             int nightMode = isChecked ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO;
             AppCompatDelegate.setDefaultNightMode(nightMode);
         });
+
         Button buttonCounter = findViewById(R.id.buttonContar);
         buttonCounter.setOnClickListener(v -> {
             TextView textViewCounter = findViewById(R.id.textViewCounter);
@@ -42,13 +43,16 @@ public class MainActivity extends AppCompatActivity {
             counter += 1;
             textViewCounter.setText(String.format(Integer.toString(counter)));
         });
+
         Button buttonResetCounter = findViewById(R.id.buttonZerarSerie);
         buttonResetCounter.setOnClickListener(v -> {
             TextView textViewCounter = findViewById(R.id.textViewCounter);
             textViewCounter.setText("0");
         });
+
         Button buttonTimerAndRest = findViewById(R.id.buttonDescansar);
         TextView txtTimer = findViewById(R.id.textTimer);
+
         CountDownTimer countDown = new CountDownTimer(45000,1000) {
             public void onTick(long millisUntilFinished) {
                 txtTimer.setText(String.format(Integer.toString(Math.round((float) (millisUntilFinished / 1000)))));
@@ -59,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 buttonTimerAndRest.setText(getString(R.string.descansar));
             }
         };
+
         buttonTimerAndRest.setOnClickListener(v -> {
             if (buttonTimerAndRest.getText().equals(getString(R.string.parar_timer))) {
                 countDown.cancel();
